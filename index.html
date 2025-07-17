@@ -1,120 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Abid</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Abid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/typed.js@2.0.12"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <!-- Navbar -->
-    <header class="bg-white shadow fixed w-full z-10">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-indigo-600">AbidDev</h1>
-            <nav class="space-x-6">
-                <a href="#about" class="hover:text-indigo-600 transition">About</a>
-                <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
-                <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
-            </nav>
+
+  <!-- Navbar -->
+  <header id="navbar" class="bg-white fixed w-full z-10 transition-shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">AbidDev</h1>
+      <nav class="space-x-6 hidden sm:flex">
+        <a href="#about" class="hover:text-indigo-600 transition">About</a>
+        <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+        <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="h-screen flex items-center justify-center bg-gradient-to-tr from-indigo-100 to-white" id="home">
+    <div class="text-center mt-24">
+      <h2 class="text-5xl font-bold mb-4">Hi, I’m <span class="text-indigo-600">Abid</span></h2>
+      <p id="typed" class="text-lg text-gray-600 h-6 mb-6"></p>
+      <a href="#projects" class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition">View Projects</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-white fade-in">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-semibold text-indigo-600 mb-4">About Me</h2>
+      <p class="text-gray-700 text-lg">
+        Saya adalah seorang programmer dengan passion di dunia game dan web development. Suka eksperimen dan terus belajar teknologi baru.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-gray-100 fade-in">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-semibold text-center text-indigo-600 mb-10">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+          <div class="text-4xl text-indigo-500 mb-4">🎮</div>
+          <h3 class="text-xl font-semibold mb-2">Game RPG 2D</h3>
+          <p class="text-gray-600">Game RPG pixel art buatan sendiri menggunakan Unity dan C#.</p>
         </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="h-screen flex items-center justify-center bg-gradient-to-tr from-indigo-100 to-white" id="home">
-        <div class="text-center mt-24">
-            <h2 class="text-5xl font-bold mb-2">Hi, I’m <span class="text-indigo-600">Abid</span></h2>
-            <p class="text-lg text-gray-600 mb-4">Web Developer & Game Engineer</p>
-            <a href="#projects" class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition">View Projects</a>
+        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+          <div class="text-4xl text-green-500 mb-4">🛒</div>
+          <h3 class="text-xl font-semibold mb-2">Website Toko Online</h3>
+          <p class="text-gray-600">Sistem e-commerce dengan fitur login, cart, dan pembayaran.</p>
         </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-20 bg-white fade-in">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-semibold text-indigo-600 mb-4">About Me</h2>
-            <p class="text-gray-700 text-lg">
-                Saya adalah seorang programmer dengan passion di dunia game dan web development. Suka eksperimen dan terus belajar teknologi baru.
-            </p>
+        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+          <div class="text-4xl text-blue-500 mb-4">💬</div>
+          <h3 class="text-xl font-semibold mb-2">Aplikasi Chat Realtime</h3>
+          <p class="text-gray-600">Menggunakan Firebase & React dengan desain bersih dan responsif.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-20 bg-gray-100 fade-in">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold text-center text-indigo-600 mb-10">Projects</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Game RPG 2D</h3>
-                    <p class="text-gray-600">Game RPG pixel art buatan sendiri menggunakan Unity dan C#.</p>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Website Toko Online</h3>
-                    <p class="text-gray-600">Sistem e-commerce dengan fitur login, cart, dan pembayaran.</p>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Aplikasi Chat Realtime</h3>
-                    <p class="text-gray-600">Menggunakan Firebase & React dengan desain bersih dan responsif.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-white fade-in">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-semibold text-indigo-600 mb-6">Contact Me</h2>
+      <p class="text-gray-600 mb-4">Punya proyek atau ingin kerja sama? Hubungi saya di:</p>
+      <a href="mailto:abid@example.com" class="text-indigo-600 font-semibold hover:underline animate-pulse">abid@example.com</a>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-20 bg-white fade-in">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-semibold text-indigo-600 mb-6">Contact Me</h2>
-            <p class="text-gray-600 mb-4">Punya proyek atau ingin kerja sama? Hubungi saya di:</p>
-            <a href="mailto:abid@example.com" class="text-indigo-600 font-semibold hover:underline">abid@example.com</a>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm">
+    <div class="flex justify-center space-x-4 mb-2">
+      <a href="https://github.com/yourusername" class="hover:text-indigo-600" title="GitHub">🐙</a>
+      <a href="https://linkedin.com/in/yourusername" class="hover:text-indigo-600" title="LinkedIn">🔗</a>
+      <a href="https://twitter.com/yourusername" class="hover:text-indigo-600" title="Twitter">🐦</a>
+    </div>
+    &copy; 2025 AbidDev. All rights reserved.
+  </footer>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm">
-        <div class="mb-2">
-            <a href="https://github.com/yourusername" class="text-gray-600 hover:text-indigo-600 mx-2">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" class="text-gray-600 hover:text-indigo-600 mx-2">LinkedIn</a>
-            <a href="https://twitter.com/yourusername" class="text-gray-600 hover:text-indigo-600 mx-2">Twitter</a>
-        </div>
-        &copy; 2025 AbidDev. All rights reserved.
-    </footer>
+  <!-- JS Animations -->
+  <script>
+    // Typing animation
+    new Typed('#typed', {
+      strings: ['Web Developer', 'Game Engineer', 'Creative Coder'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true
+    });
 
-    <script>
-        // Intersection Observer for fade-in animation
-        const fadeInElements = document.querySelectorAll('.fade-in');
+    // Fade-in effect on scroll
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
+    fadeInElements.forEach(el => observer.observe(el));
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
-
-        fadeInElements.forEach(element => {
-            observer.observe(element);
-        });
-    </script>
+    // Navbar shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('shadow-md');
+      } else {
+        navbar.classList.remove('shadow-md');
+      }
+    });
+  </script>
 </body>
 </html>
